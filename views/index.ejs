@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <form action="/add-task" method="POST">
+            <input type="text" name="name" placeholder="Enter a new task" required>
+            <button type="submit" class="add-btn">Add Task</button>
+        </form>
+        <ul class="task-list">
+            <% if (tasks && tasks.length > 0) { %>
+                <% tasks.forEach(function(task) { %>
+                    <li class="task-item <%= task.completed ? 'completed' : '' %>">
+                        <span><%= task.name %></span>
+                        <div class="buttons">
+                            <form action="/complete-task" method="POST">
+                                <input type="hidden" name="taskId" value="<%= task._id %>">
+                                <button type="submit" class="complete-btn">
+                                    <%= task.completed ? 'Undo' : 'Complete' %>
+                                </button>
+                            </form>
+                            <form action="/remove-task" method="POST">
+                                <input type="hidden" name="taskId" value="<%= task._id %>">
+                                <button type="submit" class="delete-btn">Delete</button>
+                            </form>
+                        </div>
+                    </li>
+                <% }) %>
+            <% } else { %>
+                <li class="no-task">No tasks available</li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>

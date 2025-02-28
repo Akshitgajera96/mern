@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+/* Title */
+h1 {
+    color: #0077b6; /* Deep blue */
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #0077b6;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #005f73; /* Dark blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #003d52; /* Darker blue */
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #e0f7fa; /* Light blue */
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background: #b2ebf2; /* Slightly darker blue */
+}
+
+/* Completed & Pending Tasks */
+.completed {
+    color: #00695c; /* Dark teal */
+    text-decoration: line-through;
+}
+
+.pending {
+    color: #d32f2f; /* Reddish */
+}
+
+/* Task Action Buttons */
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.complete-btn, .delete-btn {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.complete-btn {
+    background: #079a89; /* Teal */
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #0a7261;
+}
+
+.delete-btn {
+    background: #d32f2f; /* Red */
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b71c1c;
+}
+
+/* No Task Message */
+.no-task {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
