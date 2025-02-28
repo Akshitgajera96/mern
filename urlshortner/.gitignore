@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+package.json
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+debug.log
+error.log
+
+# Database
+db.sqlite
+*.sqlite
+*.sqlite-journal
+
+# Build files
+dist/
+build/
+
+# Cache and temp files
+.cache/
+.temp/
+.DS_Store
+.vscode/
+.idea/
